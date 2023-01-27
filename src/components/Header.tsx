@@ -16,7 +16,17 @@ export function Header() {
           <Plus size={20} className="text-violet-500" />
           Novo hábito
         </Dialog.Trigger>
+
+        <Dialog.Portal>
+          <Dialog.Overlay className="w-screen h-screen bg-black/80 fixed inset-0" />
+
+          <Dialog.Content>
+            Conteúdo do modal
+          </Dialog.Content>
+        </Dialog.Portal>
       </Dialog.Root>
     </div>
   );
 }
+
+// Dialog.Portal = serve para exibir o que está dentro dele em OUTRO lugar da app e não dentro do header
