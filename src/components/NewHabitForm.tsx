@@ -23,9 +23,10 @@ export function NewHabitForm() {
 
   function handleToggleWeekDay(weekDay: number) {
     if (weekDays.includes(weekDay)) {
-      
+      const weekDayIndex = weekDays.findIndex(day => day === weekDay)
     }
   }
+
   return (
     <form onSubmit={createNewHabit} className="w-full flex flex-col mt-6">
       <label htmlFor="title" className="font-semibold leading-tight">
