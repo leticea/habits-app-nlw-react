@@ -14,14 +14,14 @@ const availableWeekDays = [
 ];
 
 export function NewHabitForm() {
-  const [title, setTitle] = useState('');
+  const [title, setTitle] = useState("");
   const [weekDays, setWeekDays] = useState<number[]>([]);
 
   async function createNewHabit(event: FormEvent) {
-    event.preventDefault()
+    event.preventDefault();
 
     if (!title || weekDays.length === 0) {
-      return
+      return;
     }
 
     await api.post("habits", {
@@ -43,12 +43,12 @@ export function NewHabitForm() {
     if (weekDays.includes(weekDay)) {
       const weekDaysWithRemovedOne = weekDays.filter(day => day !== weekDay)
 
-      setWeekDays(weekDaysWithRemovedOne)
+      setWeekDays(weekDaysWithRemovedOne);
 
     } else {
-      const weekDaysWithAddedOne = [...weekDays, weekDay]
+      const weekDaysWithAddedOne = [...weekDays, weekDay];
 
-      setWeekDays(weekDaysWithAddedOne)
+      setWeekDays(weekDaysWithAddedOne);
     }
   }
 
