@@ -19,11 +19,20 @@ export function NewHabitForm() {
   function createNewHabit(event: FormEvent) {
     event.preventDefault()
 
+    console.log(title, weekDays)
+
   }
 
   function handleToggleWeekDay(weekDay: number) {
     if (weekDays.includes(weekDay)) {
-      const weekDayIndex = weekDays.findIndex(day => day === weekDay)
+      const weekDaysWithRemovedOne = weekDays.filter(day => day !== weekDay)
+
+      setWeekDays(weekDaysWithRemovedOne)
+
+    } else {
+      const weekDaysWithAddedOne = [...weekDays, weekDay]
+
+      setWeekDays(weekDaysWithAddedOne)
     }
   }
 
@@ -52,9 +61,7 @@ export function NewHabitForm() {
             <Checkbox.Root
               key={weekDay}
               className="flex items-center gap-3 group"
-              onCheckedChange={() => {
-                console.log('selecionou dia', index)
-              }}
+              onCheckedChange={() => handleToggleWeekDay(index)}
             >
               <div className="h-8 w-8 rounded-lg flex items-center justify-center bg-zinc-900 border-2 border-zinc-800 group-data-[state=checked]:bg-green-500  group-data-[state=checked]:border-green-500">
                 <Checkbox.Indicator>
