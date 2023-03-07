@@ -6,7 +6,7 @@ import { api } from "../lib/axios";
 
 interface HabitsListProps {
   date: Date;
-  onCompletedChanged: (completed: number) => void
+  onCompletedChanged: (completed: number) => void;
 }
 
 interface HabitsInfo {
@@ -36,13 +36,15 @@ export function HabitsList({ date, onCompletedChanged }: HabitsListProps) {
   async function handleToggleHabit(habitId: string) {
     await api.patch(`/habits/${habitId}/toggle`);
 
-    const isHabitAlreadyCompleted = habitsInfo!.completedHabits.includes(habitId);
+    const isHabitAlreadyCompleted =
+      habitsInfo!.completedHabits.includes(habitId);
 
     let completedHabits: string[] = [];
 
     if (isHabitAlreadyCompleted) {
-      completedHabits = habitsInfo!.completedHabits.filter(id => id !== habitId);
-
+      completedHabits = habitsInfo!.completedHabits.filter(
+        (id) => id !== habitId
+      );
     } else {
       completedHabits = [...habitsInfo!.completedHabits, habitId];
     }
@@ -50,9 +52,9 @@ export function HabitsList({ date, onCompletedChanged }: HabitsListProps) {
     setHabitsInfo({
       possibleHabits: habitsInfo!.possibleHabits,
       completedHabits,
-    })
+    });
 
-    onCompletedChanged(completedHabits.length)
+    onCompletedChanged(completedHabits.length);
   }
 
   const isDateInPast = dayjs(date).endOf("day").isBefore(new Date());
