@@ -7,6 +7,32 @@
 
 <br>
 
+# NLW Setup - Habits
+
+## 🚀 Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- [Nodejs](https://nodejs.org/en/) - v18.12.1
+- [Npm](https://www.npmjs.com/) - 8.19.2
+- [Axios](https://axios-http.com/docs/intro) - ^1.2.5"
+- [React](https://reactjs.org/) - ^18.2.0
+- [TypeScript](https://www.typescriptlang.org/) - ^4.9.3
+- [Vite](https://vitejs.dev/) - ^4.0.0
+- [Tailwindcss](https://tailwindcss.com/) - ^3.2.4
+- [Radix UI](https://www.radix-ui.com/)
+- [Clsx](https://github.com/lukeed/clsx)
+- [Day.js](https://github.com/iamkun/dayjs)
+
+## 💻 Projeto
+
+Projeto desenvolvido com React para a criação e manutenção de hábitos do dia na aplicação web.
+
+Evento do NLW na plataforma da [Rocketseat](https://www.rocketseat.com.br/).
+
+- [Back-end - API](https://github.com/leticea/habits-app-nlw-api)
+- [Front-end - Mobile](https://github.com/leticea/habits-app-nlw-react-native)
+
 <p align="center">
   <img alt="" src=".github/image.png">
 </p>
@@ -18,32 +44,6 @@
 <p align="center">
   <img alt="" src=".github/image3.png">
 </p>
-
-## NLW Setup - Habits
-
-## 🚀 Tecnologias
-
-Esse projeto foi desenvolvido com as seguintes tecnologias:
-
-- [Nodejs](https://nodejs.org/en/) - v18.12.1
-- [Npm](https://www.npmjs.com/) - 8.19.2
-- [React](https://reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Vite](https://vitejs.dev/)
-- [Axios](https://axios-http.com/docs/intro)
-- [Tailwind](https://tailwindcss.com/)
-- [Radix UI](https://www.radix-ui.com/)
-- [clsx](https://github.com/lukeed/clsx)
-- [dayjs](https://github.com/iamkun/dayjs)
-
-## 💻 Projeto
-
-Projeto desenvolvido com React para a criação e manutenção de hábitos do dia na aplicação web.
-
-Evento do NLW na plataforma da [Rocketseat](https://www.rocketseat.com.br/).
-
-- [Backend - API](https://github.com/leticea/habits-app-nlw-api)
-- [Frontend React Native - Mobile](https://github.com/leticea/habits-app-nlw-react-native)
 
 ## 🚀 Como Rodar
 
